@@ -14,7 +14,7 @@ function App() {
         {/* grid columns */}
         <div className='grid md:grid-cols-2 gap-4'>
           {/*Chart */}
-         <Graph></Graph>
+         <Graph/>
         
           {/* Form */}
         </div>
