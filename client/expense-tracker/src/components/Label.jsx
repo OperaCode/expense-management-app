@@ -3,17 +3,17 @@ import React from "react";
 const labelObject = [
   {
     type: "Savings",
-    color: "#f9c74f",
+    color: "#ffcd56",
     percent: "45%",
   },
   {
     type: "Investment",
-    color: "#f9c74f",
+    color: "#36a2eb",
     percent: "20%",
   },
   {
     type: "Expense",
-    color: "#f9c74f",
+    color: "#ff6384",
     percent: "10%",
   },
 ];
@@ -37,7 +37,7 @@ const Label = () => {
             </div>
 
             <div>
-              <h3 className="font-bol">{item.percent ?? 0}</h3>
+              <h3 className="font-bold">{item.percent ?? 0}</h3>
             </div>
 
             </div>

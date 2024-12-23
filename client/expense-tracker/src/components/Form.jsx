@@ -6,7 +6,9 @@ import List from './List';
 const Form = () => {
 
   const {register,handleSubmit,resetField} = useForm();
-  const onSubmit = data => console.log(data);
+
+  const onSubmit = (data) => {console.log(data)};
+
   return (
     <div className='form max-w-sm mx-auto w-96'>
       <h1 className='font-bold pb-4 text-xl'>Transaction</h1>
