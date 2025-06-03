@@ -1,11 +1,12 @@
 
 const express = require("express");
-// const routes = require("express")Router();
-const router = express.Router();
+// const routes = require("express").Router();
+const routes = express.Router();
 const controller = require("../controller/Controller");
 
 
-router.route("/api/categories")
+routes.route("/api/categories")
 .get(controller.createCategory);
+// .get((req,res)=>res.json("Get Request from Categories"))
 
-module.exports = router
+module.exports = routes
