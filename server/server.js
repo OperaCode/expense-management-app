@@ -10,6 +10,10 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// monogodb connection
+const copnnection = require('./db/connection.js')
+
+
 
 // using routes
 app.use(require("./routes/routes"))
