@@ -6,7 +6,7 @@ const controller = require("../controller/Controller");
 
 
 routes.route("/api/categories")
-.get(controller.createCategory);
+.post(controller.createCategories);
 // .get((req,res)=>res.json("Get Request from Categories"))
 
-module.exports = routes
+module.exports = routes 

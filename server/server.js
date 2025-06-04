@@ -21,3 +21,5 @@ app.use(require("./routes/routes"))
 app.listen(PORT,()=>{
   console.log(`Server is running on port:${PORT}`);
 }); 
+
+app.on("error",err=>console.log(`Failed to connect with HTTP Server: ${err}`)) 
