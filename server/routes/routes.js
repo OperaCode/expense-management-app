@@ -16,4 +16,12 @@ routes.route("api/transaction")
 .delete(controller.deleteTransaction)
 // .get((req,res)=>res.json("Get Request from Categories"))
 
+
+routes.route("api/labels")
+.get(controller.getLabels)
+
+
+
+
+
 module.exports = routes 

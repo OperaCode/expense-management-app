@@ -57,4 +57,26 @@ const {name, value, amount}=req.body;
   }).clone().catch(function(err){res.json({message: "Error while deleting transaction Record"})})
  }
 
-module.exports =  {createCategories, getCategories, createTransaction,getTransaction,deleteTransaction};
+  // get:http://localhost:8000/api/transaction
+  const getLabels = async(req,res)=>{
+    model.Transaction.aggregate([
+      {
+        $lookup:{
+          from: "categories",
+          localField:"type",
+          foreignField:"type",
+          as:"CategoriesInfo"
+        },
+       
+      },
+      {
+        $unwind: "$categoriesInfo"
+      }
+    ]).then(result =>{
+      res.json(data)
+    }).catch(err=>{
+      res.status(400).json("Lookup Collections Error")
+    })
+  }
+
+module.exports =  {createCategories, getCategories, createTransaction,getTransaction,deleteTransaction,getLabels};
