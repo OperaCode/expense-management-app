@@ -1,4 +1,4 @@
-import {} from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 
 const initialState = {
@@ -8,11 +8,11 @@ const initialState = {
 
 
 export const expenseSlice = createSlice({
-nae:'expense',
+name:'expense',
 initialState,
 reducers:{
     getTransactions:(state)=>{
-        
+        // get code
     }
 }
 })
