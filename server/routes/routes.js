@@ -10,14 +10,14 @@ routes.route("/api/categories")
 .get(controller.getCategories)
 
 
-routes.route("api/transaction")
+routes.route("/api/transaction")
 .post(controller.createTransaction)
 .get(controller.getTransaction)
 .delete(controller.deleteTransaction)
 // .get((req,res)=>res.json("Get Request from Categories"))
 
 
-routes.route("api/labels")
+routes.route("/api/labels")
 .get(controller.getLabels)
 
 
