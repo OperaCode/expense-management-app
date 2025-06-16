@@ -38,4 +38,4 @@ function Transaction({ category, handler }){
             <span className='block w-full'>{category.name ?? ''}</span>
         </div>
     )
-}
+ }
